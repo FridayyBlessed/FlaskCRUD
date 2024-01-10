@@ -1,1 +1,1 @@
-Crud application
+Flask CRUD application --- Create, Read, Update & Delete
