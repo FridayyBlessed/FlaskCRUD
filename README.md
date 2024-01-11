@@ -10,3 +10,4 @@ first install FLASK_SQLALCHEMY Using the command line
 pip install flask_sqlalchemy
 
 ```
+we are going to create a flask CRUD application that will Create, Retrieve, Update & Delete Employee Information. 
