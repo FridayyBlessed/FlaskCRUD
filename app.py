@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request,redirect
+from flask import Flask, abort,render_template,request,redirect
 from models import db,EmployeeModel
  
 app = Flask(__name__)
@@ -7,7 +7,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
  
-@app.before_first_request
+@app._got_first_request
+
 def create_table():
     db.create_all()
  
